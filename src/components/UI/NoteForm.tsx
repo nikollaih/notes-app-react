@@ -38,15 +38,22 @@ export const NoteForm = ({ onSubmit }: IProps) => {
         <form onSubmit={handleOnSubmit}>
             <fieldset className="mb-4">
                 <label htmlFor="title" className="text-gray-900">Title</label><br/>
-                <input ref={titleInputRef}
-                       type="text"
-                       name="title"
-                       id="title"
-                       minLength={5}
-                       required
-                       className="w-full border-2 rounded-md p-2"
-                       placeholder="Call the doctor"
+                <input
+                    ref={titleInputRef}
+                    type="text"
+                    name="title"
+                    id="title"
+                    minLength={5}
+                    required
+                    className="w-full border-2 rounded-md p-2"
+                    placeholder="Call the doctor"
+                    aria-label="Note Title"
+                    aria-required="true"
+                    role="textbox"
+                    aria-describedby="title-helper"
                 />
+                <small id="title-helper" className="text-gray-500">Enter a title for your note (min 5
+                    characters).</small>
             </fieldset>
             <fieldset className="mb-4">
                 <label htmlFor="description" className="text-gray-900">Description</label><br/>
@@ -58,10 +65,22 @@ export const NoteForm = ({ onSubmit }: IProps) => {
                     required
                     rows={5}
                     className="w-full border-2 rounded-md p-2"
-                    placeholder="Schedule a new appoinment"
+                    placeholder="Schedule a new appointment"
+                    aria-label="Note Description"
+                    aria-required="true"
+                    role="textbox"
+                    aria-describedby="description-helper"
                 />
+                <small id="description-helper" className="text-gray-500">Provide a brief description (min 5
+                    characters).</small>
             </fieldset>
-            <button className="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700" type="submit">Add Note</button>
+            <button
+                className="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700"
+                type="submit"
+                aria-label="Add new note"
+            >
+                Add Note
+            </button>
         </form>
     </div>
 }
