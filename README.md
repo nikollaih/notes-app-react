@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# Notes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Notes App built with **React**, **Vite**, and **Tailwind CSS**. This application allows users to create and manage notes.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+    - [Installation](#installation)
+    - [Running the App](#running-the-app)
+- [Screenshots](#screenshots)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Introduction
 
-## Expanding the ESLint configuration
+This project aims to create a simple notes application that meets the following acceptance criteria:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Displays a form with fields for **Title** and **Description** on the homepage.
+- Notes are displayed as cards below the form once added.
+- Fully responsive with a **mobile-first** design.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Add new notes with a title and description.
+- View all notes in a responsive card layout.
+- Simple and clean user interface.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Technologies Used
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: Next-generation frontend tooling for fast development.
+- **Tailwind CSS**: Utility-first CSS framework for responsive design.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Getting Started
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/nikollaih/notes-app-react.git
+   cd notes-app-react
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+
+### Running the app
+   <pre>npm run dev</pre>
+
+### Screenshots
+
+![img.png](src/assets/img.png)
+![img_1.png](src/assets/img_1.png)
+![img_2.png](src/assets/img_2.png)
