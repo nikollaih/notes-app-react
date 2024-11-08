@@ -7,7 +7,12 @@ export const HomePage = () => {
     // Define the notes state
     const [notes, setNotes] = useState<INote[]>([]);
 
-    // Add a new note to the notes list
+    /*
+    * function: handleOnAddNote
+    * description: Add a new note to the notes state
+    * params: [note] -> A new object that represents the new note to be included in the list
+    * returns: void
+    */
     const handleOnAddNote = (note: INote) => {
         // Copy the notes list to add a new one
         const notesCopy = [...notes]
@@ -17,7 +22,7 @@ export const HomePage = () => {
         setNotes(notesCopy);
     }
 
-    return <div className="mx-auto my-10 max-w-3xl px-6 md:px-0">
+    return <div className="mx-auto my-10 max-w-3xl px-6 lg:px-0">
         <h1 className="font-bold text-2xl mb-10 text-white">Notes App</h1>
         <NoteForm onSubmit={handleOnAddNote} />
         <NoteList notes={notes} />

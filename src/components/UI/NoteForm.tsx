@@ -10,7 +10,11 @@ export const NoteForm = ({ onSubmit }: IProps) => {
     const titleInputRef = useRef<HTMLInputElement>(null);
     const descriptionInputRef = useRef<HTMLTextAreaElement>(null);
 
-    // Handle the form submit to prevent the default behavior
+    /*
+    * function: handleOnSubmit
+    * description: Prevents the default form behavior, then call the onSubmit callback with the new
+    * note information to add this to the notes state
+     */
     const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -28,7 +32,10 @@ export const NoteForm = ({ onSubmit }: IProps) => {
         onSubmit(newNote);
     }
 
-    // Clear the form inputs
+    /*
+    * function: clearForm
+    * description: Clear the inputs in the form to reset it
+     */
     const clearForm = () => {
         titleInputRef.current!.value = '';
         descriptionInputRef.current!.value = '';
